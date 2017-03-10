@@ -1,0 +1,22 @@
+01: instalar composer e laravel versão 5.4;
+02: usar comando "composer create-project --prefer-dist laravel/laravel NOME_DO_PROJETO";
+03: Instale as seguintes extensões do php:
+	sudo apt-get update
+	sudo apt-get install php-mbstring
+	sudo apt-get install libnet-libidn-perl 
+	sudo apt-get install php-all-dev 
+	sudo apt-get install php-cgi 
+	sudo apt-get install php-cli 
+	sudo apt-get install php-common 
+	sudo apt-get install php-curl 
+	sudo apt-get install php-dev 
+	sudo apt-get install php-gd 
+	sudo apt-get install php-gmp
+
+04: dar permissões 777 nas pastas storage e bootstrap;
+05: Dentro da pasta do projeto renomear o arquivo ".env.example" para ".env";
+06: Dentro da pasta do projeto executar o comando "composer install";
+07: Depois que terminar o comando acima executar "php artisan key:generate";
+08: Executar "php artisan serve" para rodar o servidor!!
+
+EEEEEEEEEEEEEEEE ACABOUU!!
