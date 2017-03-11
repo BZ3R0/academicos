@@ -1,4 +1,5 @@
-@extends('templates.academicos') @section('content')
+@extends('default.principal') 
+@section('conteudo')
 <div class="container">
     <div class="row">
         <div class="contact">
@@ -35,4 +36,4 @@
         </div>
     </div>
 </div>
-@endsection
+@stop

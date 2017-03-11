@@ -8,7 +8,7 @@ use Request;
 class alunoController extends Controller{
 
 	public function home(){
-		return view('academicos.aluno');
+		return view('aluno.home');
 	}
 }
 

@@ -8,7 +8,7 @@ use Request;
 class gestorController extends Controller{
 
 	public function home(){
-		return view('default.principal');
+		return view('gestor.home');
 	}
 }
 	
