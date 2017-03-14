@@ -12,3 +12,4 @@
 */
 
 Route::get('/gestor', 'GestorController@home');
+Route::get('/aluno', 'AlunoController@home');
