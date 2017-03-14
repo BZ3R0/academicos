@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/gestor', 'GestorController@home');
-Route::get('/aluno', 'AlunoController@home');
 Route::get('/','HomeController@exibe');
+Route::get('/gestor', 'GestorController@home');
+	Route::get('/cadastra', 'GestorController@cadastra');
+	Route::post('/cadastra/novo', 'GestorController@novo');
+	Route::get('/lista', 'GestorController@exibe');
+
+Route::get('/aluno', 'AlunoController@home');

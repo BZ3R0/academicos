@@ -51,16 +51,16 @@
             <div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>                    
+                    <li class="current"><a href="http://127.0.0.1:8000/"><i class="glyphicon glyphicon-home"></i> Home</a></li>                    
                     <li class="submenu">
-                         <a href="#">
+                         <a href="http://127.0.0.1:8000/gestor">
                             <i class="glyphicon glyphicon-list"></i> Gestor
                             <span class="caret pull-right"></span>
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Cadastrar</a></li>
-                            <li><a href="signup.html">Listar</a></li>
+                            <li><a href="/cadastra">Cadastrar</a></li>
+                            <li><a href="/lista">Listar</a></li>
                             <li><a href="signup.html">Configurações</a></li>
                         </ul>
                     </li>
@@ -94,9 +94,9 @@
 
           <div class="col-md-9">
 
-            <div class="content-box-large">
-                @yield('conteudo')
-            </div>
+            
+              @yield('conteudo')
+            
           </div>
         </div>
     </div>
