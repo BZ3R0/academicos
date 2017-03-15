@@ -13,4 +13,7 @@
 
 Route::get('/gestor', 'GestorController@home');
 Route::get('/aluno', 'AlunoController@home');
+  Route::get('/aluno', 'AlunoController@alunoInformation');
+  Route::get('/disciplina', 'AlunoController@alunoDisciplina');
+  Route::get('/grade', 'AlunoController@alunoNota');
 Route::get('/','HomeController@exibe');
