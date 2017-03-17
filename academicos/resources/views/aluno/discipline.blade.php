@@ -11,7 +11,7 @@
 
 						@foreach ($disciplinas as $disciplina)
 						<tr>
-							<td><a href="grade">{{$disciplina->name}}</a></td>
+							<td><a href="grade/{{$disciplina->iddiscipline}}">{{$disciplina->name}}</a></td>
 							<td>{{$disciplina->teacher}}</td>
 						</tr>
 						@endforeach
