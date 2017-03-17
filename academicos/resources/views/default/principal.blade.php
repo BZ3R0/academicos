@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Theme v3</title>
+    <title>Academicos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/font-awesome.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,7 +20,7 @@
     <div class="header">
          <div class="container">
             <div class="row">
-               <div class="col-md-5">                  
+               <div class="col-md-5">
                   <div class="logo">
                      <h1><a href="index.html"><i class="fa fa-square-o "></i>&nbsp;Acadêmicos</a></h1>
                   </div>
@@ -51,7 +51,7 @@
             <div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>                    
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
                     <li class="submenu">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Gestor
@@ -71,9 +71,11 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Notas</a></li>
-                            <li><a href="signup.html">Frequência</a></li>
-                            <li><a href="signup.html">Ementas</a></li>
+                            <li><a href="aluno">Home</a></li>
+                            <li><a href="disciplina">Disciplinas</a></li>
+                            <li><a href="grade">Notas</a></li>
+                            <li><a href="#">Frequência</a></li>
+                            <li><a href="#">Ementas</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -101,20 +103,25 @@
         </div>
     </div>
 
+    <div class="navbar navbar-default navbar-fixed-bottom">
+       <div class="container">
+         <p class="navbar-text pull-left">© 2017 - Academicos</p>
+       </div>
+    </div>
     <!-- <footer>
          <div class="container">
-         
+
             <div class="copy text-center">
                Copyright 2017 <a href='#'>Acadêmicos</a>
             </div>
-            
+
          </div>
     </footer> -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
   </body>
 </html>
