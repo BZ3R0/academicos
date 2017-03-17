@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 class homeController extends Controller{
     
     public function exibe(){
-        return view('default.principal');
+        return view('default.home');
     }
 }
 

@@ -11,9 +11,15 @@
 |
 */
 
+Route::get('/','HomeController@exibe');
 Route::get('/gestor', 'GestorController@home');
-Route::get('/aluno', 'AlunoController@home');
-  Route::get('/aluno', 'AlunoController@alunoInformation');
+	Route::get('/cadastra', 'GestorController@cadastra');
+	Route::post('/cadastra/novo', 'GestorController@novo');
+	Route::get('/lista', 'GestorController@exibe');
+	Route::get('/lista/edita/{id}', 'GestorController@edita');
+	Route::post('/lista/update', 'GestorController@update');
+	Route::get('/lista/remove/{id}', 'GestorController@remove');
+
+Route::get('/aluno', 'AlunoController@alunoInformation');
   Route::get('/disciplina', 'AlunoController@alunoDisciplina');
   Route::get('/grade/{id}', 'AlunoController@alunoNota');
-Route::get('/','HomeController@exibe');
