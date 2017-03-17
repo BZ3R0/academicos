@@ -26,12 +26,12 @@ class alunoController extends Controller{
 		return view('aluno.discipline')->with('disciplinas', $disciplinas);
 	}
 
-	public function alunoNota(){
+	public function alunoNota($iddiscipline){
 		$notas = DB::select('select n.nota, n.unidade
 												from notas n
 												left join class_has_discipline cd on cd.discipline_iddiscipline = n.discipline_iddiscipline
 												left join discipline d on cd.discipline_iddiscipline = d.iddiscipline
-												where d.iddiscipline = 1');
+												where d.iddiscipline = ?', array($iddiscipline));
 
 		return view('aluno.grade')->with('notas', $notas);
 	}
