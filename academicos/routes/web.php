@@ -16,5 +16,8 @@ Route::get('/gestor', 'GestorController@home');
 	Route::get('/cadastra', 'GestorController@cadastra');
 	Route::post('/cadastra/novo', 'GestorController@novo');
 	Route::get('/lista', 'GestorController@exibe');
+	Route::get('/lista/edita/{id}', 'GestorController@edita');
+	Route::post('/lista/update', 'GestorController@update');
+	Route::get('/lista/remove/{id}', 'GestorController@remove');
 
 Route::get('/aluno', 'AlunoController@home');
