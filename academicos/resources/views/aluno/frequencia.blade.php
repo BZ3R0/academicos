@@ -5,14 +5,16 @@
 			<div class="table-responsive">
 				<table class="table">
             <tr>
-							<th>Unidade</th>
-              <th>Nota</th>
+							<th>Falta</th>
+              <th>Data</th>
+							<th>Justificativa</th>
             </tr>
 
-						@foreach ($notas as $nota)
+						@foreach ($frequencias as $frequencia)
 						<tr>
-							<td>{{$nota->unidade}}</td>
-							<td>{{$nota->nota}}</td>
+							<td>{{$frequencia->falta}}</td>
+							<td>{{$frequencia->data}}</td>
+							<td>{{$frequencia->justificativa}}</td>
 						</tr>
 						@endforeach
         </table>
