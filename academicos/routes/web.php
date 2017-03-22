@@ -22,4 +22,5 @@ Route::get('/gestor', 'GestorController@home');
 
 Route::get('/aluno', 'AlunoController@alunoInformation');
   Route::get('/disciplina', 'AlunoController@alunoDisciplina');
+	Route::get('/frequencia', 'AlunoController@alunoFrequencia');
   Route::get('/grade/{id}', 'AlunoController@alunoNota');

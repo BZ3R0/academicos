@@ -74,8 +74,7 @@
                             <li><a href="aluno">Home</a></li>
                             <li><a href="disciplina">Disciplinas</a></li>
                             <li><a href="grade">Notas</a></li>
-                            <li><a href="#">Frequência</a></li>
-                            <li><a href="#">Ementas</a></li>
+                            <li><a href="frequencia">Frequência</a></li>
                         </ul>
                     </li>
                     <li class="submenu">

@@ -6,10 +6,6 @@ use Request;
 
 class alunoController extends Controller{
 
-	public function home(){
-		return view('aluno.home');
-	}
-
 	public function alunoInformation(){
 		$users = DB::select('select * from user where iduser = 1');
 		return view('aluno.home')->with('users',$users);
@@ -17,11 +13,12 @@ class alunoController extends Controller{
 
 	public function alunoDisciplina(){
 		$disciplinas = DB::select('select d.iddiscipline, d.name, d.teacher
-												 from discipline d
-												 left join class_has_discipline cd on d.iddiscipline = cd.discipline_iddiscipline
-												 left join class c on cd.class_idclass = c.idclass
-												 left join user u on c.idclass = u.class_idclass
-												 where u.iduser = 1');
+															 from discipline d
+															 left join class_has_discipline cd on d.iddiscipline = cd.discipline_iddiscipline
+															 left join class c on cd.class_idclass = c.idclass
+															 left join students s on c.idclass = s.class_idclass
+															 left join user u on s.user_iduser = u.iduser
+															 where u.iduser = 1;');
 
 		return view('aluno.discipline')->with('disciplinas', $disciplinas);
 	}
@@ -34,5 +31,23 @@ class alunoController extends Controller{
 												where d.iddiscipline = ?', array($iddiscipline));
 
 		return view('aluno.grade')->with('notas', $notas);
+	}
+
+	public function alunoTodasNotas(){
+		$allGrades = DB::select('select n.nota
+												 from notas n
+												 left join user u on n.user_iduser = u.iduser
+												 where u.iduser = 1');
+
+		return view('default.principal')->with('allGrades', $allGrades);
+	}
+
+	public function alunoFrequencia(){
+		$frequencias = DB::select('select *
+															 from frequencia f
+															 left join user u on f.user_iduser = u.iduser
+															 left join discipline d on f.discipline_iddiscipline = d.iddiscipline
+															 where d.iddiscipline=1;');
+		return view('aluno.frequencia')->with('frequencias',$frequencias);
 	}
 }
