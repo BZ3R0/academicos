@@ -43,6 +43,11 @@ class alunoController extends Controller{
 	}
 
 	public function alunoFrequencia(){
-		return view('aluno.frequencia');
+		$frequencias = DB::select('select *
+															 from frequencia f
+															 left join user u on f.user_iduser = u.iduser
+															 left join discipline d on f.discipline_iddiscipline = d.iddiscipline
+															 where d.iddiscipline=1;');
+		return view('aluno.frequencia')->with('frequencias',$frequencias);
 	}
 }
