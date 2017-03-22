@@ -3,7 +3,7 @@
 <div class="content-box-large">
 		@foreach ($users as $user)
 		<div class="panel-heading">
-			<div class="panel-title"><h1>{{$user->name}}</h1></div>
+			<div class="panel-title"><h1>{{$user->name}} {{$user->sobrenome}}</h1></div>
 		</div>
 
 		<div class="panel-body">
