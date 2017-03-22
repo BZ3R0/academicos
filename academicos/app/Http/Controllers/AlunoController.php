@@ -35,4 +35,17 @@ class alunoController extends Controller{
 
 		return view('aluno.grade')->with('notas', $notas);
 	}
+
+	public function alunoTodasNotas(){
+		$allGrades = DB::select('select n.nota
+												 from notas n
+												 left join user u on n.user_iduser = u.iduser
+												 where u.iduser = 1');
+
+		return view('default.principal')->with('allGrades', $allGrades);
+	}
+
+	public function alunoFrequencia(){
+		return view('aluno.frequencia');
+	}
 }
