@@ -23,3 +23,9 @@ Route::get('/gestor', 'GestorController@home');
 Route::get('/aluno', 'AlunoController@alunoInformation');
   Route::get('/disciplina', 'AlunoController@alunoDisciplina');
   Route::get('/grade/{id}', 'AlunoController@alunoNota');
+
+Route::get('/responsavel', 'ResponsavelController@home');
+  Route::get('/disciplina', 'ResponsavelController@disciplina');
+  Route::get('/feedback/{id}', 'ResponsavelController@feedback');
+  Route::get('/notas', 'ResponsavelController@notas');
+  Route::get('/feedbacks', 'ResponsavelController@responsavelFeedbacks');

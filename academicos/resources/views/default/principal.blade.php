@@ -85,9 +85,11 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Notas</a></li>
-                            <li><a href="signup.html">Frequência</a></li>
-                            <li><a href="signup.html">Ementas</a></li>
+                            <li><a href="/responsavel">Home</a></li>
+                            <li><a href="#">Notas</a></li>
+                            <li><a href="#">Frequência</a></li>
+                            <li><a href="#">Ementas</a></li>
+                            <li><a href="/feedbacks">Feedbacks</a></li>
                         </ul>
                     </li>
                 </ul>
