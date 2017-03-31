@@ -25,7 +25,9 @@ Route::get('/aluno', 'AlunoController@alunoInformation');
   Route::get('/grade/{id}', 'AlunoController@alunoNota');
 
 Route::get('/responsavel', 'ResponsavelController@home');
-  Route::get('/disciplina', 'ResponsavelController@disciplina');
-  Route::get('/feedback/{id}', 'ResponsavelController@feedback');
-  Route::get('/notas', 'ResponsavelController@notas');
+  Route::get('/disciplinas', 'ResponsavelController@responsavelDisciplinas');
+  Route::get('/notas', 'ResponsavelController@responsavelNotas');
   Route::get('/feedbacks', 'ResponsavelController@responsavelFeedbacks');
+  Route::get('/disciplina/{id}', 'ResponsavelController@disciplina');
+  Route::get('/nota/{id}', 'ResponsavelController@nota');
+  Route::get('/feedback/{id}', 'ResponsavelController@feedback');

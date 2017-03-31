@@ -86,10 +86,11 @@
                          <!-- Sub menu -->
                          <ul>
                             <li><a href="/responsavel">Home</a></li>
-                            <li><a href="#">Notas</a></li>
-                            <li><a href="#">Frequência</a></li>
-                            <li><a href="#">Ementas</a></li>
+                            <li><a href="/notas">Notas</a></li>
+                            <li><a href="/disciplinas">Disciplinas</a></li>
                             <li><a href="/feedbacks">Feedbacks</a></li>
+                            <li><a href="#">Frequência</a></li>
+                            <li><a href="#">Ementas</a></li>                            
                         </ul>
                     </li>
                 </ul>
