@@ -61,7 +61,8 @@
                          <ul>
                             <li><a href="/cadastra">Cadastrar</a></li>
                             <li><a href="/lista">Listar</a></li>
-                            <li><a href="signup.html">Configurações</a></li>
+                            <li><a href="/turma">Turma</a></li>
+                            <li><a href="/responsavel">Adicionar Responsável</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
