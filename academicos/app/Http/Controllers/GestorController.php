@@ -74,6 +74,37 @@ class gestorController extends Controller{
 
 		return view('gestor.home')->with('mensagem',$mensagem);
 	}
+
+	public function turma(){
+
+		$courses = DB::select('select * from class');		
+		return view('gestor.turma')->with('courses',$courses);		
+	}
+
+	public function adiciona($idclass) {
+		// selecionar alunos q não estejam matriculados em turmas
+		$active[0] = DB::select('select * from user left join students 
+				on user.iduser = students.user_iduser 
+				where user.status = 1 and user.perfil = 2 and students.class_idclass = ?',array($idclass));
+		$active[1] = DB:: select('select * from user where status = 1 and perfil = 2');
+		$active[2] = $idclass;
+
+		return view('gestor.adiciona')->with('users', $active);
+
+	}
+
+	public function addNovo(){
+		$iduser = Request::input('student');
+		$idclass = Request::input('idclass');
+		$consult = DB:: select('select * from students where idstudents = ?', array($iduser));
+		if ($consult) {
+			$mensagem = "Aluno já esta cadastrado em turma. Remova-o primeiro da turma para depois adiciona-lo a uma nova.";
+			return view('gestor.turma')->with('mensagem',$mensagem);
+		}
+		$add = DB::insert('insert into students values (null,?,?)',array($iduser,$idclass));
+		$mensagem = "Aluno atribuido a Turma com sucesso!";
+		return view('gestor.turma')-> with('mensagem', $mensagem);
+	}
 }
 	
 ?>
